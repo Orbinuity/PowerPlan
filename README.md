@@ -8,6 +8,6 @@ Go to the [website](https://orbinuity.github.io/Orbinuity/PowerPlan.html) for do
 
 Before copying any part of this project, please read the [LICENSE](./LICENSE) file to understand the terms and conditions.
 
-## Members
+## Made by
 
 Head: [Flurop](https://github.com/Flurop)
