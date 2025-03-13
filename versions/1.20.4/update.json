@@ -1,0 +1,10 @@
+{
+    "homepage": "https://orbinuity.github.io/Orbinuity/PowerPlanPage",
+    "1.20.4": {
+      "1.0.0": "https://orbinuity.github.io/PowerPlan/changelogs/1.0.0-changelog"
+    },
+    "promos": {
+      "1.20.4-latest": "1.0.0",
+      "1.20.4-recommended": "1.0.0"
+    }
+  }
