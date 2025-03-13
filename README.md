@@ -6,7 +6,7 @@ A minecraft mod putting power plants in minecraft
 
 ## Website
 
-Go to the [website](https://orbinuity.github.io/Orbinuity/PowerPlan.html) for downloads
+Go to the [website](https://orbinuity.github.io/PowerPlan) for downloads
 
 ## License
 
