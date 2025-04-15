@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="PowerPlan project Orbinuity website">
+    <meta property="og:description" content="The website of a tech company called Orbinuity.">
+    <meta property="og:image" content="https://orbinuity.github.io/assets/logo.png">
+    <meta name="description" content="The website of a tech company called Orbinuity.">
+    <meta name="generator" content="Orbinuity/Github">
+    <meta name="author" content="Orbinuity">
+    <meta name="keywords" content="Orbinuity, Website, tech, software, hartware, company">
+    <meta name="robots" content="index, follow">
+    <title>Power Plan - Orbinuity</title>
+    <link rel="icon" href="assets/logo.png" type="image/png">
+    <style>
+                body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        main {
+            padding: 20px;
+        }
+        .download {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .download h2, .download h3, .download button {
+            display: block;
+            margin-bottom: 10px;
+        }
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+        }
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Power Plan</h1>
+    </header>
+    <main>
+        <button style="float: left;" onclick="window.location.href = 'projects';">Back</button>
+        <div style="clear: both;"></div>
+        <p>A simpel mod that adds nuclear power to minecraft.</p>
+        <div style="text-align: center;" class="download">
+            <div id="latestChangelog" style="font-size: 1.5em;"></div>
+        </div>
+        <h1 style="text-align: center;">Downloads</h1>
+        <div style="text-align: center;" class="download">
+            <h2>1.20.4</h2>
+            <h3>Recommended:</h3>
+            <button onclick="window.location.href = 'https://orbinuity.github.io/PowerPlan/versions/1.20.4/1.0.0-PowerPlan.jar';">Download 1.0.0</button>
+            <h3>Latest:</h3>
+            <button onclick="window.location.href = 'https://orbinuity.github.io/PowerPlan/versions/1.20.4/1.0.0-PowerPlan.jar';">Download 1.0.0</button>
+            <h3>Other versions:</h3>
+            <button onclick="window.location.href = 'https://orbinuity.github.io/PowerPlan/versions/1.20.4/1.0.0-PowerPlan.jar';">Download 1.0.0</button>
+        </div>
+        <h1 style="text-align: center;">All changelogs</h1>
+        <div style="text-align: center;" class="download">
+            <div id="1.0.0-Changelog" style="font-size: 1.5em;"></div>
+            <script>
+                async function loadAllChangelogs() {
+                    try {
+                        const response = await fetch('https://orbinuity.github.io/PowerPlan/changelogs/1.0.0-changelog.md');
+                        const markdown = await response.text();
+                        const htmlContent = marked.parse(markdown);
+                        document.getElementById('1.0.0-Changelog').innerHTML = htmlContent;
+                        document.getElementById('latestChangelog').innerHTML = htmlContent;
+                    } catch (error) {
+                        console.error('Error loading all changelogs:', error);
+                    }
+                }
+
+                // Initialize both markdown loaders
+                window.addEventListener('load', () => {
+                    loadAllChangelogs();
+                });
+            </script>
+        </div>
+        <br></br>
+        <br></br>
+    </main>
+    <footer>
+        <p>Visit the <a href="https://github.com/Orbinuity/PowerPlan">Power Plan Repo</a> | Made by <a href="https://github.com/Orbinuity">Orbinuity</a> | Email: <a href="mailto:orbinuity@ratgers.nl">Orbinuity@ratgers.nl</a></p>
+    </footer>
+</body>
+</html>
